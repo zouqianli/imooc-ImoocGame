@@ -16,6 +16,9 @@
 		99D384901EC13C0400043186 /* FirstTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D3848F1EC13C0400043186 /* FirstTableViewController.m */; };
 		99D384941EC16A4D00043186 /* FirstCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D384921EC16A4D00043186 /* FirstCollectionViewController.m */; };
 		99D384981EC1D41B00043186 /* CodeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D384971EC1D41B00043186 /* CodeTableViewController.m */; };
+		99D3849B1EC1D59900043186 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D3849A1EC1D59900043186 /* MyTableViewCell.m */; };
+		99D3849E1EC28C8E00043186 /* CodeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D3849D1EC28C8E00043186 /* CodeCollectionViewController.m */; };
+		99D384A11EC2AED300043186 /* MyCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 99D384A01EC2AED300043186 /* MyCollectionViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,12 @@
 		99D384921EC16A4D00043186 /* FirstCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstCollectionViewController.m; sourceTree = "<group>"; };
 		99D384961EC1D41B00043186 /* CodeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeTableViewController.h; sourceTree = "<group>"; };
 		99D384971EC1D41B00043186 /* CodeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeTableViewController.m; sourceTree = "<group>"; };
+		99D384991EC1D59900043186 /* MyTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewCell.h; sourceTree = "<group>"; };
+		99D3849A1EC1D59900043186 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
+		99D3849C1EC28C8E00043186 /* CodeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CodeCollectionViewController.h; sourceTree = "<group>"; };
+		99D3849D1EC28C8E00043186 /* CodeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CodeCollectionViewController.m; sourceTree = "<group>"; };
+		99D3849F1EC2AED300043186 /* MyCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyCollectionViewCell.h; sourceTree = "<group>"; };
+		99D384A01EC2AED300043186 /* MyCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyCollectionViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,8 +81,14 @@
 				99D3848F1EC13C0400043186 /* FirstTableViewController.m */,
 				99D384961EC1D41B00043186 /* CodeTableViewController.h */,
 				99D384971EC1D41B00043186 /* CodeTableViewController.m */,
+				99D384991EC1D59900043186 /* MyTableViewCell.h */,
+				99D3849A1EC1D59900043186 /* MyTableViewCell.m */,
 				99D384911EC16A4D00043186 /* FirstCollectionViewController.h */,
 				99D384921EC16A4D00043186 /* FirstCollectionViewController.m */,
+				99D3849C1EC28C8E00043186 /* CodeCollectionViewController.h */,
+				99D3849D1EC28C8E00043186 /* CodeCollectionViewController.m */,
+				99D3849F1EC2AED300043186 /* MyCollectionViewCell.h */,
+				99D384A01EC2AED300043186 /* MyCollectionViewCell.m */,
 				99D384831EC1384000043186 /* Assets.xcassets */,
 				99D384751EC1358C00043186 /* Main.storyboard */,
 				99D3847A1EC1358C00043186 /* LaunchScreen.storyboard */,
@@ -167,8 +182,11 @@
 				99D384981EC1D41B00043186 /* CodeTableViewController.m in Sources */,
 				99D3846E1EC1358C00043186 /* AppDelegate.m in Sources */,
 				99D384941EC16A4D00043186 /* FirstCollectionViewController.m in Sources */,
+				99D3849B1EC1D59900043186 /* MyTableViewCell.m in Sources */,
 				99D384901EC13C0400043186 /* FirstTableViewController.m in Sources */,
 				99D3846B1EC1358C00043186 /* main.m in Sources */,
+				99D384A11EC2AED300043186 /* MyCollectionViewCell.m in Sources */,
+				99D3849E1EC28C8E00043186 /* CodeCollectionViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

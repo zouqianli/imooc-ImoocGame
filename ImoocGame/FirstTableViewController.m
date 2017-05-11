@@ -7,7 +7,7 @@
 //
 
 #import "FirstTableViewController.h"
-
+#import "CodeTableViewController.h"
 @interface FirstTableViewController () {
     NSArray *heros;
     UITableViewCell *cell;
@@ -24,18 +24,7 @@
     }
     NSString *filePath = [[NSBundle mainBundle] pathForResource:@"heros" ofType:@"plist"];
     heros = [NSArray arrayWithContentsOfFile:filePath];
-    
 }
-//    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent animated:YES];
-//    [self preferredStatusBarStyle:UIStatusBarStyleDefault];
-- (UIStatusBarStyle)preferredStatusBarStyle {
-    return UIStatusBarStyleDefault;
-}
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -45,11 +34,13 @@
     return heros.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"cell no : %lu",indexPath.row);
-    NSString *heroID = @"heroID";
-//    cell = [tableView dequeueReusableCellWithIdentifier:heroID forIndexPath:indexPath];
-//    if (!cell) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:heroID];
+    NSString *storyboardID = @"storyboardID"; // cellID
+    
+    cell = [tableView dequeueReusableCellWithIdentifier:storyboardID forIndexPath:indexPath];
+    if (!cell) { // 因为使用storyboard重用cell，if语句不会执行--不创建cell
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:storyboardID];
+        NSLog(@"cell no : %lu",indexPath.row); // 不创建，不输出
+    }
     NSDictionary *heroInfo = [heros objectAtIndex:indexPath.row];
         cell.backgroundColor = [UIColor lightGrayColor];
         NSString *image  = [heroInfo valueForKey:@"icon"];
@@ -78,7 +69,6 @@
     UIView *splitView = [[UIView alloc] initWithFrame:CGRectMake(0, 108, 414, 2)];
     splitView.backgroundColor = [UIColor whiteColor];
     [cell addSubview:splitView];
-//    }
     return cell;
 }
 
@@ -87,8 +77,8 @@
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
     UIView *headView = [[UIView alloc] init];
     headView.backgroundColor = [UIColor greenColor];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 300, 20)];
-    titleLabel.backgroundColor = [UIColor grayColor];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 20, 414, 20)];
+//    titleLabel.backgroundColor = [UIColor grayColor];
     titleLabel.textAlignment = NSTextAlignmentCenter;
     titleLabel.text = @"head--storyboard";
     [headView addSubview:titleLabel];
@@ -108,9 +98,11 @@
 }
 - (void) buttonAction:(UIButton *)btn {
     NSLog(@"btn clicked");
-    // 呈现新的控制器
-    
+    // 呈现新的控制器--代码添加codetableviewcontroller
+    CodeTableViewController *codeTableVC = [[CodeTableViewController alloc] init];
+    [self presentViewController:codeTableVC animated:YES completion:nil];
 }
+
 - (UIView *)tableView:(UITableView *)tableView viewForFooterInSection:(NSInteger)section {
     UIView *footView = [[UIView alloc] init];
     footView.backgroundColor = [UIColor brownColor];
